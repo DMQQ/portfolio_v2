@@ -10,7 +10,7 @@ export default function Home() {
         className="flex flex-col md:flex-row w-11/12 mx-auto min-h-screen items-center py-20 gap-5"
       >
         <section className="flex-[3] flex justify-start items-center">
-          <h1 className="text-white font-extrabold text-7xl lg:text-8xl">
+          <h1 className="text-white font-extrabold text-6xl lg:text-8xl">
             Hello! I&apos;m <b>Damian</b>, a{" "}
             <span className="gradient-text">Full-Stack Developer</span> bringing
             ideas to life.
@@ -36,7 +36,7 @@ export default function Home() {
                 width={70}
                 height={70}
                 priority
-                className="align-middle w-10 md:w-[4.5rem]"
+                className="align-middle w-14 md:w-[4.5rem]"
               />
             ))}
           </div>
@@ -44,7 +44,7 @@ export default function Home() {
       </article>
       <article className="flex flex-col lg:flex-row w-11/12 mx-auto min-h-screen items-center py-20 gap-5">
         <section className="flex-1">
-          <h2 className="text-7xl font-extrabold">
+          <h2 className="text-5xl md:text-7xl font-extrabold">
             <span className="text-lg text-purple-800">
               <span className="text-2xl">&#x2192;</span> About me
             </span>{" "}
@@ -124,12 +124,12 @@ export default function Home() {
         {projects.map((project, index) => (
           <section
             key={project.name}
-            className="hover:ring-2 rounded-xl hover:ring-purple-700 p-3 transition-colors duration-300 ease-in-out"
+            className="hover:ring-2 rounded-xl hover:ring-purple-700 md:p-3 transition-colors duration-300 ease-in-out"
           >
             <div className="bg-zinc-950 flex flex-col h-full px-4 pb-3 rounded-lg">
               <h3 className="text-white text-3xl font-extrabold">
                 <Link
-                  href={"/project/" + project.name.replaceAll(" ", "_")}
+                  href={"/projects/" + project.name.replaceAll(" ", "_")}
                   className="text-base text-purple-800 font-bold"
                 >
                   <span className="text-2xl">&#x2192;</span> See more

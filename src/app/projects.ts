@@ -1,4 +1,25 @@
-export const projects = [
+interface Stack {
+  frontend: string[];
+  backend: string[];
+}
+
+interface IProject {
+  name: string;
+  description: string;
+  mainStack: Stack;
+  additionalLibraries: Stack;
+  thumbnails?: string[];
+
+  content?: [
+    {
+      heading: string;
+      content: string;
+      images: string[];
+    }
+  ];
+}
+
+export const projects: IProject[] = [
   {
     name: "Visbro Personal Solutions - Website",
     description:
@@ -21,6 +42,8 @@ export const projects = [
       ],
       backend: [],
     },
+
+    thumbnails: [],
   },
   {
     name: "Mobile ShoppingApp - Mobile App",
@@ -63,6 +86,44 @@ export const projects = [
         "class-transformer",
         "class-validator",
         "@nestjs/schedule",
+      ],
+    },
+  },
+  {
+    name: "MyLife App",
+    description:
+      "Multipurpose app with all you need! Funds and expense tracking. Workout scheduling, tracking exercise progress, creating your own workouts. Calendar with push notifications, event tasks and more",
+    mainStack: {
+      backend: [
+        "nestjs.svg",
+        "graphql.png",
+        "typeorm.png",
+        "typescript.png",
+        "nodejs.png",
+      ],
+      frontend: [
+        "expo.png",
+        "react_native.svg",
+        "typescript.png",
+        "react.png",
+        "redux.webp",
+        "graphql.png",
+      ],
+    },
+    additionalLibraries: {
+      backend: [
+        "Bcrypt",
+        "JWT",
+        "@apollo/client",
+        "@nestjs/schedule",
+        "expo-push-notifications-sdk",
+        "graphql",
+      ],
+      frontend: [
+        "@shopify/calendar",
+        "@reduxjs/toolkit",
+        "expo-secure-store",
+        "expo-authentication",
       ],
     },
   },
