@@ -11,7 +11,7 @@ export default function Home() {
       >
         <section className="flex-[3] flex justify-start items-center">
           <h1 className="text-white font-extrabold text-7xl lg:text-8xl">
-            Hello! I'm <b>Damian</b>, a{" "}
+            Hello! I&apos;m <b>Damian</b>, a{" "}
             <span className="gradient-text">Full-Stack Developer</span> bringing
             ideas to life.
           </h1>
@@ -58,9 +58,10 @@ export default function Home() {
               building things for the web blossomed during my five years in a
               programming-focused high school. While I gained foundational
               knowledge there, my self-driven nature pushed me to delve deeper.
-              Today, I'm equipped with a diverse tech stack that allows me to
-              navigate both mobile and web development landscapes. In the mobile
-              realm, I'm comfortable crafting engaging applications with{" "}
+              Today, I&apos;m equipped with a diverse tech stack that allows me
+              to navigate both mobile and web development landscapes. In the
+              mobile realm, I&apos;m comfortable crafting engaging applications
+              with{" "}
               <span className="text-purple-600 font-bold">React Native</span>{" "}
               and streamlining the process using{" "}
               <span className="text-purple-600 font-bold">Expo</span>. For web
@@ -75,8 +76,8 @@ export default function Home() {
               enhanced code maintainability and safety.
             </p>
             <p className="text-zinc-200 mt-2 text-lg">
-              But my expertise extends beyond the frontend. I'm equally adept at
-              building the backend with{" "}
+              But my expertise extends beyond the frontend. I&apos;m equally
+              adept at building the backend with{" "}
               <span className="text-purple-600 font-bold">NodeJS</span> and
               structuring its logic using
               <span className="text-purple-600 font-bold">NestJS</span>.
@@ -90,8 +91,8 @@ export default function Home() {
               This diverse skillset, coupled with my thirst for knowledge and
               constant learning, positions me as a valuable asset for projects
               and individuals who share my passion for technology and
-              innovation. Feel free to reach out – I'm excited to collaborate
-              and explore new challenges!
+              innovation. Feel free to reach out – I&apos;m excited to
+              collaborate and explore new challenges!
             </p>
           </div>
         </section>
