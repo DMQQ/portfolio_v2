@@ -107,7 +107,7 @@ export default function Home() {
         </section>
       </article>
 
-      <h3 className="text-start w-11/12 mx-auto px-3 text-7xl font-extrabold flex flex-col">
+      <h3 className="text-start text-5xl w-11/12 mx-auto px-3 md:text-7xl font-extrabold flex flex-col">
         <a
           href="https://github.com/DMQQ"
           rel="nofollow"
@@ -120,7 +120,7 @@ export default function Home() {
         <span className="gradient-text">contributed to</span>
       </h3>
 
-      <article className="w-full md:w-11/12 mx-auto py-20 grid grid-cols-1 grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-5">
+      <article className="w-full p-5 md:w-11/12 mx-auto py-20 grid grid-cols-1 grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-5">
         {projects.map((project, index) => (
           <section
             key={project.name}
@@ -140,24 +140,24 @@ export default function Home() {
 
               <p className="text-zinc-200 mt-2 flex-1">{project.description}</p>
 
-              <div className="flex flex-row gap-5 mt-5 overflow-x-scroll pb-3">
+              <div className="flex flex-row snap-x gap-5 mt-5 overflow-x-scroll pb-3">
                 {[1, 2, 3, 4, 5].map((key) => (
                   <div
                     key={key}
-                    className="w-44 h-32 bg-zinc-900 rounded-md flex-shrink-0"
+                    className="w-44 h-32 snap-center bg-zinc-900 rounded-md flex-shrink-0"
                   />
                 ))}
               </div>
 
-              <div className="flex flex-row gap-5 w-full mt-5 items-center ">
+              <div className="flex flex-row flex-wrap gap-5 w-full mt-5 items-center ">
                 {[
                   ...project.mainStack.frontend,
                   ...project.mainStack.backend,
-                ].map((src: string) =>
+                ].map((src: string, index) =>
                   /\.(jpg|png|svg|webp)$/i.test(src) ? (
                     <Image
                       priority
-                      key={src}
+                      key={src + index}
                       src={"/tech/" + src}
                       width={35}
                       height={30}

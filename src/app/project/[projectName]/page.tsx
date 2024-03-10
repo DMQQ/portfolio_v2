@@ -14,7 +14,7 @@ export default function ProjectPage({
   );
 
   return (
-    <main className="pt-28 pb-10 flex flex-col md:flex-row justify-center p-5 w-full md:w-11/12 mx-auto gap-5">
+    <main className="pt-28 pb-10 flex flex-col md:flex-row justify-center p-5 w-screen overflow-x-hidden md:w-11/12 mx-auto gap-5">
       <section className="flex-1 w-full flex flex-col items-start">
         <h1 className="text-5xl md:text-7xl font-extrabold text-white flex flex-col">
           <span className="text-base text-purple-800 font-bold">
@@ -100,7 +100,25 @@ export default function ProjectPage({
         <div
           //  className="grid grid-cols-2 md:grid-cols-4 grid-rows-1 gap-3 relative"
           id="imgstack"
+          className="hidden xl:block"
         >
+          {["home.jpg", "home2.jpg", "product.jpg", "cart.jpg"].map(
+            (src, index) => (
+              <a key={index}>
+                <Image
+                  priority
+                  key={src}
+                  src={"/mobile-shop/" + src}
+                  width={200}
+                  height={400}
+                  alt="Previw"
+                  className="m"
+                />
+              </a>
+            )
+          )}
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 grid-rows-1 gap-3 relative">
           {["home.jpg", "home2.jpg", "product.jpg", "cart.jpg"].map(
             (src, index) => (
               <a key={index}>
