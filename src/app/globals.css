@@ -31,3 +31,71 @@ body {
     text-wrap: balance;
   }
 }
+
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-600 via-pink-700  to-purple-700 inline-block text-transparent bg-clip-text;
+}
+
+#imgstack {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 2%;
+}
+
+#imgstack a {
+  width: 288px;
+  height: 200px;
+  position: absolute;
+  display: block;
+  /* border: 6px solid #f0f0f0; */
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: margin 0.25s;
+  -webkit-transition: margin 0.5s;
+}
+
+#imgstack img {
+  width: 288px;
+  max-height: 700px;
+}
+
+#imgstack a:first-of-type {
+  margin-top: -5px;
+  margin-left: -20px;
+  z-index: 2;
+  transform: rotate(-3deg);
+  -webkit-transform: rotate(-3deg);
+}
+
+#imgstack a:nth-of-type(2) {
+  margin-top: -5px;
+  margin-left: -10px;
+  z-index: 1;
+}
+
+#imgstack a:last-of-type {
+  transform: rotate(3deg);
+  -webkit-transform: rotate(3deg);
+}
+
+#imgstack:hover a:first-of-type {
+  margin-left: -310px;
+  margin-top: 5px;
+}
+
+#imgstack:hover a:nth-of-type(2) {
+  margin-top: -5px;
+}
+
+#imgstack:hover a:last-of-type {
+  margin-left: 290px;
+  margin-top: 5px;
+}
+
+#imgstack a:first-of-type:hover,
+#imgstack a:last-of-type:hover {
+  margin-top: -5px;
+}
+#imgstack a:nth-of-type(2):hover {
+  margin-top: -10px;
+}
