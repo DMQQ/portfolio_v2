@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="w-full fixed flex flex-row p-5 top-0 left-0 justify-between bg-black">
+        <header className="w-full fixed flex flex-row p-5 top-0 left-0 justify-between bg-black z-50">
           <Link
             href="/"
             className="bg-gradient-to-l font-extrabold text-xl from-blue-500 to-purple-500 inline-block text-transparent bg-clip-text"

@@ -129,7 +129,7 @@ export default function Home() {
             <div className="bg-zinc-950 flex flex-col h-full px-4 pb-3 rounded-lg">
               <h3 className="text-white text-3xl font-extrabold">
                 <Link
-                  href={"/projects/" + project.name.replaceAll(" ", "_")}
+                  href={"/projects/" + project.path}
                   className="text-base text-purple-800 font-bold"
                 >
                   <span className="text-2xl">&#x2192;</span> See more
@@ -140,11 +140,13 @@ export default function Home() {
 
               <p className="text-zinc-200 mt-2 flex-1">{project.description}</p>
 
-              <div className="flex flex-row snap-x gap-5 mt-5 overflow-x-scroll pb-3">
-                {[1, 2, 3, 4, 5].map((key) => (
-                  <div
-                    key={key}
-                    className="w-44 h-32 snap-center bg-zinc-900 rounded-md flex-shrink-0"
+              <div className="flex flex-row snap-x gap-5 mt-5 overflow-x-scroll md:overflow-auto pb-3">
+                {project.thumbnails?.map((src) => (
+                  <img
+                    key={src}
+                    src={src}
+                    alt=""
+                    className="max-w-40 max-h-24 object-contain"
                   />
                 ))}
               </div>
@@ -172,6 +174,70 @@ export default function Home() {
             </div>
           </section>
         ))}
+      </article>
+
+      <article className="w-full p-5 md:w-11/12 mx-auto py-20 flex flex-col md:flex-row justify-center items-center">
+        <section className="flex-1 flex flex-col">
+          <h4 className="text-white text-7xl font-extrabold flex flex-col">
+            <span className="text-lg text-purple-800">
+              <span className="text-2xl">&#x2192;</span> About me
+            </span>{" "}
+            Contact me
+          </h4>
+
+          <p className="text-zinc-200 flex-1 mt-2">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo
+            consequatur quidem animi modi repellendus ab, quasi, labore facilis
+            officiis quo atque fugit ratione, sequi consequuntur aut corporis
+            nobis provident incidunt.
+          </p>
+          <p className="text-zinc-200 flex-1 mt-2">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo
+            consequatur quidem animi modi repellendus ab, quasi, labore facilis
+            officiis quo atque fugit ratione, sequi consequuntur aut corporis
+            nobis provident incidunt.
+          </p>
+        </section>
+        <section className="flex-1 flex flex-col">
+          <form
+            action=""
+            className="w-full md:w-2/3 lg:w-1/2 mx-auto bg-zinc-950 p-5 rounded-md"
+          >
+            <div className="flex flex-col">
+              <label htmlFor="reason" className="font-bold mb-2">
+                Why are you texting?
+              </label>
+              <input
+                type="text"
+                required
+                id="reason"
+                className="bg-zinc-900 rounded-md p-2 text-purple-600 ring-2 focus:ring-purple-800 outline-none ring-zinc-800"
+              />
+            </div>
+            <div className="flex flex-col mt-5">
+              <label htmlFor="email" className="font-bold mb-2">
+                Your email
+              </label>
+              <input
+                type="email"
+                required
+                id="email"
+                className="bg-zinc-900 rounded-md p-2 text-purple-600 ring-2 focus:ring-purple-800 outline-none ring-zinc-800"
+              />
+            </div>
+            <div className="flex flex-col mt-5">
+              <label htmlFor="message" className="font-bold mb-2">
+                Your email
+              </label>
+              <textarea
+                rows={10}
+                required
+                id="message"
+                className="bg-zinc-900 rounded-md p-2 text-purple-600 ring-2 focus:ring-purple-800 outline-none ring-zinc-800 resize-none"
+              />
+            </div>
+          </form>
+        </section>
       </article>
 
       <footer className="text-zinc-600 p-5">
