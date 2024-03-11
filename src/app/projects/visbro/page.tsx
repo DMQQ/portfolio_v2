@@ -13,7 +13,7 @@ export default function VisbroPage() {
     <main>
       <main className="pt-28 pb-10 flex flex-col md:flex-row justify-center p-5 w-screen md:w-11/12 mx-auto gap-5">
         <section className="flex-1 w-full flex flex-col items-start">
-          <h1 className="text-5xl md:text-7xl font-extrabold text-white flex flex-col">
+          <h1 className="text-5xl md:text-7xl font-extrabold text-white flex flex-col ">
             <span className="text-base text-purple-800 font-bold">
               <span className="text-2xl">&#x2192;</span> Project name
             </span>
@@ -45,8 +45,8 @@ export default function VisbroPage() {
             </span>
           </h2>
 
-          <div className="flex flex-col md:flex-row gap-5">
-            <ul className="grid grid-cols-2 gap-3 list-disc pl-8 items-center bg-zinc-950 rounded-xl p-3 w-auto">
+          <div className="flex flex-col md:flex-row gap-5 w-full">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 list-disc pl-8 items-center bg-zinc-950 rounded-xl p-3 w-auto">
               {project?.additionalLibraries.frontend.map((text) => (
                 <li key={text} className="uppercase text-sm font-medium">
                   {text}
@@ -55,7 +55,7 @@ export default function VisbroPage() {
             </ul>
 
             {project?.additionalLibraries.backend.length !== 0 && (
-              <ul className="grid h-full grid-cols-2 gap-3 list-disc pl-8 items-center bg-zinc-950 rounded-xl p-3 w-auto">
+              <ul className="grid h-full grid-cols-1 md:grid-cols-2 gap-3 list-disc pl-8 items-center bg-zinc-950 rounded-xl p-3 w-auto">
                 {project?.additionalLibraries.backend.map((text) => (
                   <li key={text} className="uppercase text-sm font-medium">
                     {text}
@@ -82,7 +82,7 @@ export default function VisbroPage() {
         </section>
       </main>
       <main className="pt-28 pb-10 flex  flex-col md:flex-row-reverse justify-center p-5 w-screen md:w-11/12 mx-auto gap-5">
-        <div className={`grid grid-cols-2 w-full gap-5`}>
+        <div className={`grid grid-cols-1 md:grid-cols-2 w-full gap-5`}>
           {project?.images?.map((src, index) => (
             <Image
               priority

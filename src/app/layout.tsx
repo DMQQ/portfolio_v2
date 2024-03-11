@@ -32,7 +32,7 @@ export default function RootLayout({
                 (label) => (
                   <li key={label}>
                     <a
-                      href={`#${label}`}
+                      href={`#${label.toLowerCase()}`}
                       className="text-purple-400 hover:text-purple-600 transition-colors"
                     >
                       #{label}

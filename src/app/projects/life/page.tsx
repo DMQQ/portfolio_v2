@@ -49,8 +49,8 @@ export default function ProjectPage() {
             </span>
           </h2>
 
-          <div className="flex flex-col md:flex-row gap-5">
-            <ul className="grid grid-cols-2 gap-3 list-disc pl-8 items-center bg-zinc-950 rounded-xl p-3 w-auto">
+          <div className="flex flex-col md:flex-row gap-5 w-full">
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 list-disc pl-8 items-center bg-zinc-950 rounded-xl p-3 w-auto">
               {project?.additionalLibraries.frontend.map((text) => (
                 <li key={text} className="uppercase text-sm font-medium">
                   {text}
@@ -59,7 +59,7 @@ export default function ProjectPage() {
             </ul>
 
             {project?.additionalLibraries.backend.length !== 0 && (
-              <ul className="grid h-full grid-cols-2 gap-3 list-disc pl-8 items-center bg-zinc-950 rounded-xl p-3 w-auto">
+              <ul className="grid h-full grid-cols-1 md:grid-cols-2 gap-3 list-disc pl-8 items-center bg-zinc-950 rounded-xl p-3 w-auto">
                 {project?.additionalLibraries.backend.map((text) => (
                   <li key={text} className="uppercase text-sm font-medium">
                     {text}

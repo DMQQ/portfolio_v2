@@ -36,13 +36,16 @@ export default function Home() {
                 width={70}
                 height={70}
                 priority
-                className="align-middle w-14 md:w-[4.5rem]"
+                className="align-middle w-12 md:w-[4.5rem]"
               />
             ))}
           </div>
         </section>
       </article>
-      <article className="flex flex-col lg:flex-row w-11/12 mx-auto min-h-screen items-center py-20 gap-5">
+      <article
+        id="overview"
+        className="flex flex-col lg:flex-row w-11/12 mx-auto min-h-screen items-center py-20 gap-5"
+      >
         <section className="flex-1">
           <h2 className="text-5xl md:text-7xl font-extrabold">
             <span className="text-lg text-purple-800">
@@ -120,97 +123,152 @@ export default function Home() {
         <span className="gradient-text">contributed to</span>
       </h3>
 
-      <article className="w-full p-5 md:w-11/12 mx-auto py-20 grid grid-cols-1 grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-5">
+      <article
+        id="projects"
+        className="w-full p-5 md:w-11/12 mx-auto py-20 grid grid-cols-1 grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-5"
+      >
         {projects.map((project, index) => (
-          <section
-            key={project.name}
-            className="hover:ring-2 rounded-xl hover:ring-purple-700 md:p-3 transition-colors duration-300 ease-in-out"
-          >
-            <div className="bg-zinc-950 flex flex-col h-full px-4 pb-3 rounded-lg">
-              <h3 className="text-white text-3xl font-extrabold">
-                <Link
-                  href={"/projects/" + project.path}
-                  className="text-base text-purple-800 font-bold"
-                >
-                  <span className="text-2xl">&#x2192;</span> See more
-                </Link>
-                <br />
-                {project.name}
-              </h3>
+          <Link href={"/projects/" + project.path}>
+            <section
+              key={project.name}
+              className="hover:ring-2  hover:ring-purple-700 md:p-3 transition-colors duration-300 ease-in-out rounded-lg"
+            >
+              <div className="bg-zinc-950 flex flex-col h-full px-4 pb-3 rounded-lg">
+                <h3 className="text-white text-3xl font-extrabold">
+                  <span className="text-base text-purple-800 font-bold">
+                    <span className="text-2xl">&#x2192;</span> Project name
+                  </span>
+                  <br />
+                  {project.name}
+                </h3>
 
-              <p className="text-zinc-200 mt-2 flex-1">{project.description}</p>
+                <p className="text-zinc-200 mt-2 flex-1">
+                  {project.description}
+                </p>
 
-              <div className="flex flex-row snap-x gap-5 mt-5 overflow-x-scroll md:overflow-auto pb-3">
-                {project.thumbnails?.map((src) => (
-                  <img
-                    key={src}
-                    src={src}
-                    alt=""
-                    className="max-w-40 max-h-24 object-contain"
-                  />
-                ))}
-              </div>
-
-              <div className="flex flex-row flex-wrap gap-5 w-full mt-5 items-center ">
-                {[
-                  ...project.mainStack.frontend,
-                  ...project.mainStack.backend,
-                ].map((src: string, index) =>
-                  /\.(jpg|png|svg|webp)$/i.test(src) ? (
-                    <Image
-                      priority
-                      key={src + index}
-                      src={"/tech/" + src}
-                      width={35}
-                      height={30}
-                      alt="Technology"
-                      className="object-contain"
+                <div className="flex flex-row snap-x gap-5 mt-5 overflow-x-scroll md:overflow-auto pb-3">
+                  {project.thumbnails?.map((src) => (
+                    <img
+                      key={src}
+                      src={src}
+                      alt=""
+                      className="max-w-40 max-h-24 object-contain"
                     />
-                  ) : (
-                    <span key={src}>{src}</span>
-                  )
-                )}
+                  ))}
+                </div>
+
+                <div className="flex flex-row flex-wrap gap-5 w-full mt-5 items-center ">
+                  {[
+                    ...project.mainStack.frontend,
+                    ...project.mainStack.backend,
+                  ].map((src: string, index) =>
+                    /\.(jpg|png|svg|webp)$/i.test(src) ? (
+                      <Image
+                        priority
+                        key={src + index}
+                        src={"/tech/" + src}
+                        width={35}
+                        height={30}
+                        alt="Technology"
+                        className="object-contain"
+                      />
+                    ) : (
+                      <span key={src}>{src}</span>
+                    )
+                  )}
+                </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </Link>
         ))}
       </article>
 
-      <article className="w-full p-5 md:w-11/12 mx-auto py-20 flex flex-col md:flex-row justify-center items-center">
+      <article className="w-full p-5 md:w-11/12 mx-auto py-20 flex min-h-screen flex-col lg:flex-row justify-center items-center">
         <section className="flex-1 flex flex-col">
-          <h4 className="text-white text-7xl font-extrabold flex flex-col">
+          <h4 className="text-white text-5xl md:text-7xl font-extrabold flex flex-col">
             <span className="text-lg text-purple-800">
-              <span className="text-2xl">&#x2192;</span> About me
+              <span className="text-2xl">&#x2192;</span> Education
             </span>{" "}
-            Contact me
+            Education & <span className="gradient-text">Certificates</span>
           </h4>
 
-          <p className="text-zinc-200 flex-1 mt-2">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo
-            consequatur quidem animi modi repellendus ab, quasi, labore facilis
-            officiis quo atque fugit ratione, sequi consequuntur aut corporis
-            nobis provident incidunt.
-          </p>
-          <p className="text-zinc-200 flex-1 mt-2">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo
-            consequatur quidem animi modi repellendus ab, quasi, labore facilis
-            officiis quo atque fugit ratione, sequi consequuntur aut corporis
-            nobis provident incidunt.
-          </p>
+          <div className="w-full lg:w-2/3">
+            <p className="text-zinc-200 flex-1 mt-2">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Explicabo consequatur quidem animi modi repellendus ab, quasi,
+              labore facilis officiis quo atque fugit ratione, sequi
+              consequuntur aut corporis nobis provident incidunt.
+            </p>
+            <p className="text-zinc-200 flex-1 mt-2">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Explicabo consequatur quidem animi modi repellendus ab, quasi,
+              labore facilis officiis quo atque fugit ratione, sequi
+              consequuntur aut corporis nobis provident incidunt.
+            </p>
+            <p className="text-zinc-200 flex-1 mt-2">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Explicabo consequatur quidem animi modi repellendus ab, quasi,
+              labore facilis officiis quo atque fugit ratione, sequi
+              consequuntur aut corporis nobis provident incidunt.
+            </p>
+          </div>
         </section>
+        <section className="grid md:grid-cols-2 grid-cols-1 grid-rows-2 justify-center items-center gap-5 mt-10">
+          <div className="w-64 h-64 bg-zinc-900 rounded-md" />
+          <div className="w-64 h-64 bg-zinc-900 rounded-md" />
+          <div className="w-64 h-64 bg-zinc-900 rounded-md" />
+          <div className="w-64 h-64 bg-zinc-900 rounded-md" />
+        </section>
+      </article>
+
+      <article className="w-full p-5 md:w-11/12 mx-auto py-20 flex flex-col lg:flex-row justify-between items-center">
         <section className="flex-1 flex flex-col">
+          <h4 className="text-white text-5xl md:text-7xl font-extrabold flex flex-col">
+            <span className="text-lg text-purple-800">
+              <span className="text-2xl">&#x2192;</span> Contact
+            </span>{" "}
+            Contact <br /> <span className="gradient-text">me!</span>
+          </h4>
+
+          <div className="w-full lg:w-3/4">
+            <p className="text-zinc-200 flex-1 mt-2">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Explicabo consequatur quidem animi modi repellendus ab, quasi,
+              labore facilis officiis quo atque fugit ratione, sequi
+              consequuntur aut corporis nobis provident incidunt.
+            </p>
+            <p className="text-zinc-200 flex-1 mt-2">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Explicabo consequatur quidem animi modi repellendus ab, quasi,
+              labore facilis officiis quo atque fugit ratione, sequi
+              consequuntur aut corporis nobis provident incidunt.
+            </p>
+            <p className="text-zinc-200 flex-1 mt-2">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Explicabo consequatur quidem animi modi repellendus ab, quasi,
+              labore facilis officiis quo atque fugit ratione, sequi
+              consequuntur aut corporis nobis provident incidunt.
+            </p>
+          </div>
+        </section>
+        <section className="mt-10">
           <form
             action=""
-            className="w-full md:w-2/3 lg:w-1/2 mx-auto bg-zinc-950 p-5 rounded-md"
+            className="w-[calc(100vw-2.5rem)] max-w-[28rem] flex flex-col flex-1 bg-zinc-950 p-5 rounded-lg"
           >
+            <h5 className="text-white text-5xl md:text-7xl font-extrabold flex flex-col mb-5">
+              <span className="text-lg text-purple-800">
+                <span className="text-2xl">&#x2192;</span> Message me
+              </span>{" "}
+            </h5>
             <div className="flex flex-col">
-              <label htmlFor="reason" className="font-bold mb-2">
-                Why are you texting?
+              <label htmlFor="subject" className="font-bold mb-2">
+                Subject
               </label>
               <input
                 type="text"
                 required
-                id="reason"
+                id="subject"
                 className="bg-zinc-900 rounded-md p-2 text-purple-600 ring-2 focus:ring-purple-800 outline-none ring-zinc-800"
               />
             </div>
@@ -227,7 +285,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col mt-5">
               <label htmlFor="message" className="font-bold mb-2">
-                Your email
+                Message
               </label>
               <textarea
                 rows={10}
@@ -236,6 +294,12 @@ export default function Home() {
                 className="bg-zinc-900 rounded-md p-2 text-purple-600 ring-2 focus:ring-purple-800 outline-none ring-zinc-800 resize-none"
               />
             </div>
+            <button
+              type="submit"
+              className="px-3 py-3 rounded-md bg-purple-950 hover:bg-purple-900 transition-colors ease-in-out duration-150 mt-5 w-full"
+            >
+              Send message
+            </button>
           </form>
         </section>
       </article>
