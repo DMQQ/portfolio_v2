@@ -127,12 +127,9 @@ export default function Home() {
         id="projects"
         className="w-full p-5 md:w-11/12 mx-auto py-20 grid grid-cols-1 grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-5"
       >
-        {projects.map((project, index) => (
-          <Link href={"/projects/" + project.path}>
-            <section
-              key={project.name}
-              className="hover:ring-2  hover:ring-purple-700 md:p-3 transition-colors duration-300 ease-in-out rounded-lg"
-            >
+        {projects.map((project) => (
+          <Link href={"/projects/" + project.path} key={project.name}>
+            <section className="hover:ring-2  hover:ring-purple-700 md:p-3 transition-colors duration-300 ease-in-out rounded-lg">
               <div className="bg-zinc-950 flex flex-col h-full px-4 pb-3 rounded-lg">
                 <h3 className="text-white text-3xl font-extrabold">
                   <span className="text-base text-purple-800 font-bold">
