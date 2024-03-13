@@ -155,10 +155,12 @@ export default function Home() {
                 </div>
 
                 <div className="flex flex-row flex-wrap gap-5 w-full mt-5 items-center ">
-                  {[
-                    ...project.mainStack.frontend,
-                    ...project.mainStack.backend,
-                  ].map((src: string, index) =>
+                  {Array.from(
+                    new Set([
+                      ...project.mainStack.frontend,
+                      ...project.mainStack.backend,
+                    ])
+                  ).map((src: string, index) =>
                     /\.(jpg|png|svg|webp)$/i.test(src) ? (
                       <Image
                         priority

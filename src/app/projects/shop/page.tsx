@@ -5,7 +5,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 export default function ProjectPage() {
-  const projectName = "Mobile_ShoppingApp_-_Mobile_App";
+  const projectName = "Mobile Shopping app";
   const project = projects.find(
     ({ name }) => name === projectName.replaceAll("_", " ")
   );

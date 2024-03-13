@@ -3,7 +3,7 @@ import TechStackList from "@/components/TechStackList";
 import Image from "next/image";
 
 export default function VisbroPage() {
-  const projectName = "Visbro_Personal_Solutions_-_Website";
+  const projectName = "Recruiting website";
 
   const project = projects.find(
     ({ name }) => name === projectName.replaceAll("_", " ")

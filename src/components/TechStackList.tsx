@@ -6,7 +6,7 @@ export default function TechStackList(props: {
 }) {
   return (
     <ul className="flex flex-row gap-5 items-center mt-3 bg-zinc-950 rounded-full p-3 px-6 w-auto">
-      {props.list.map((src) => (
+      {props?.list?.map((src) => (
         <li key={src}>
           {/\.(jpg|png|svg|webp)$/i.test(src) ? (
             <Image

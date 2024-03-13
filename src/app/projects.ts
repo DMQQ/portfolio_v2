@@ -27,9 +27,9 @@ interface IProject {
 export const projects: IProject[] = [
   {
     path: "visbro",
-    name: "Visbro Personal Solutions - Website",
+    name: "Recruiting website",
     description:
-      "Visbro is a revolutionary recruitment platform built to connect businesses with top talent across industries. Leveraging cutting-edge technologies like Next.js, Tailwind CSS, and the Ninox Cloud API, Visbro offers a multilingual, lightning-fast experience for both businesses and candidates. Packed with features like static site generation and numerous forms, Visbro streamlines the recruitment process, empowers businesses to attract top talent, and ensures scalability for long-term success.",
+      "Recruiting company website - A NextJS Typescript project with serverless functions! App offers 10 native translations for many languages like Polish, German, English, Arabic and more. Many forms with Formik & Yup validation to offer the best User expirience. Images are well uptimized using next/image library and compressed to modern formats to decrease page size. Everything is connected with Ninox Low-Code platform using REST-API to safely keep the form data and to manage job offers",
     mainStack: {
       frontend: ["nextjs.png", "tailwindcss.png", "react.png"],
       backend: ["NINOX"],
@@ -71,8 +71,8 @@ export const projects: IProject[] = [
   },
   {
     path: "shop",
-    name: "Mobile ShoppingApp - Mobile App",
-    description: `Mobile Shop app is a FullStack Project. The mobile part is made using ReactNative with Typescript and the backend part uses NestJS with NodeJS runtime. App offers plenty of features like Stripe Payments, Cart manipulations, List of favourite products with push notifications about any changes to the following offer.`,
+    name: "Mobile Shopping app",
+    description: `React Native Shop App - FullStack project made in React Native with Expo and NestJS with MySQL database for server side. Ap has many features like authentication, account managment, in-app payments using Stripe API, product's cart managment, following product status and viewing recent purchases. Everything is handled via GraphQL/REST-API provided by my backend server.`,
     mainStack: {
       frontend: [
         "typescript.png",
@@ -131,7 +131,7 @@ export const projects: IProject[] = [
     path: "life",
     name: "MyLife App",
     description:
-      "Multipurpose app with all you need! Funds and expense tracking. Workout scheduling, tracking exercise progress, creating your own workouts. Calendar with push notifications, event tasks and more",
+      "Multipurpose app with all you need! Funds and expense tracking. Workout scheduling, tracking exercise progress, creating your own workouts. Calendar with push notifications, event tasks and more. App made in React-Native with Expo on mobile side and NestJS and MySQL on server side. As a http client app uses GraphQL.",
     mainStack: {
       backend: [
         "nestjs.svg",
