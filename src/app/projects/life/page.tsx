@@ -28,6 +28,14 @@ export default function ProjectPage() {
             {project?.description}
           </p>
 
+          <ul className="mt-5 list-disc px-5">
+            <li>User authentication</li>
+            <li>Creating reminders with tasks and images</li>
+            <li>Expense tracking</li>
+            <li>Creating secured notes</li>
+            <li>Creating your own workouts and tracking your progress</li>
+          </ul>
+
           <h2 className="text-2xl font-extrabold mt-5 mb-2 flex flex-col">
             <span className="text-base text-purple-800 font-bold">
               <span className="text-2xl">&#x2192;</span> Project stack

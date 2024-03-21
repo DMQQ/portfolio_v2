@@ -10,7 +10,7 @@ export default function Home() {
         className="flex flex-col md:flex-row w-11/12 mx-auto min-h-screen items-center py-20 gap-5"
       >
         <section className="flex-[3] flex justify-start items-center">
-          <h1 className="text-white font-extrabold text-6xl lg:text-8xl">
+          <h1 className="text-white font-extrabold text-6xl lg:text-7xl 2xl:text-8xl">
             Hello! I&apos;m <b>Damian</b>, a{" "}
             <span className="gradient-text">Full-Stack Developer</span> bringing
             ideas to life.
@@ -36,7 +36,7 @@ export default function Home() {
                 width={70}
                 height={70}
                 priority
-                className="align-middle w-12 md:w-[4.5rem]"
+                className="align-middle w-12 md:w-[4.5rem] select-none"
               />
             ))}
           </div>
@@ -129,7 +129,7 @@ export default function Home() {
       >
         {projects.map((project) => (
           <Link href={"/projects/" + project.path} key={project.name}>
-            <section className="hover:ring-2  hover:ring-purple-700 md:p-3 transition-colors duration-300 ease-in-out rounded-lg">
+            <section className="hover:ring-2 h-full hover:ring-purple-700 md:p-3 transition-colors duration-300 ease-in-out rounded-lg">
               <div className="bg-zinc-950 flex flex-col h-full px-4 pb-3 rounded-lg">
                 <h3 className="text-white text-3xl font-extrabold">
                   <span className="text-base text-purple-800 font-bold">
@@ -143,7 +143,7 @@ export default function Home() {
                   {project.description}
                 </p>
 
-                <div className="flex flex-row snap-x gap-5 mt-5 overflow-x-scroll md:overflow-auto pb-3">
+                <div className="flex flex-row snap-x gap-5 mt-5 overflow-scroll md:overflow-hidden  pb-3">
                   {project.thumbnails?.map((src) => (
                     <img
                       key={src}
@@ -188,35 +188,63 @@ export default function Home() {
             <span className="text-lg text-purple-800">
               <span className="text-2xl">&#x2192;</span> Education
             </span>{" "}
-            Education & <span className="gradient-text">Certificates</span>
+            Education & <span className="gradient-text">Expirience</span>
           </h4>
 
-          <div className="w-full lg:w-2/3">
-            <p className="text-zinc-200 flex-1 mt-2">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Explicabo consequatur quidem animi modi repellendus ab, quasi,
-              labore facilis officiis quo atque fugit ratione, sequi
-              consequuntur aut corporis nobis provident incidunt.
+          <div className="w-full mt-5 lg:w-2/3">
+            <h5 className="text-xl">
+              Zespół szkół elektronicznych i telekomunikacyjnych in Olsztyn,
+              Poland <br /> (2019-2024)
+            </h5>
+
+            <p className="text-zinc-300 flex-1 mt-2">
+              I graduated from a programming-focused high school, where I
+              learned the basics of programming and software development. This
+              experience laid the foundation for my future in technology and
+              provided me with the knowledge and skills to pursue my passion.
             </p>
-            <p className="text-zinc-200 flex-1 mt-2">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Explicabo consequatur quidem animi modi repellendus ab, quasi,
-              labore facilis officiis quo atque fugit ratione, sequi
-              consequuntur aut corporis nobis provident incidunt.
+
+            <h5 className="text-xl mt-5">
+              Internship at{" "}
+              <span className="text-purple-600 font-bold">ARTNEO</span> (2022) 1
+              month
+            </h5>
+            <p className="text-zinc-300 flex-1 mt-2">
+              As part of my internship, I worked on a project that involved the
+              development of a web application for a learning purposes using
+              NextJS and Tailwind CSS. This experience allowed me to gain a deep
+              understanding of the development process and the importance of
+              collaboration and communication in a professional setting.
             </p>
-            <p className="text-zinc-200 flex-1 mt-2">
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Explicabo consequatur quidem animi modi repellendus ab, quasi,
-              labore facilis officiis quo atque fugit ratione, sequi
-              consequuntur aut corporis nobis provident incidunt.
+
+            <h5 className="text-xl mt-5">
+              Internship at{" "}
+              <span className="text-purple-600 font-bold">
+                Wirtualna Polska (WP Media S.A.)
+              </span>{" "}
+              (2022) 1 month
+            </h5>
+            <p className="text-zinc-300 flex-1 mt-2">
+              During my intership i learned a lot about linux and it's
+              enviroment. We were taught how to set zabix monitoring system and
+              how to use it. I also learned about the importance of security and
+              how to secure a server.
             </p>
           </div>
         </section>
-        <section className="grid md:grid-cols-2 grid-cols-1 grid-rows-2 justify-center items-center gap-5 mt-10">
-          <div className="w-64 h-64 bg-zinc-900 rounded-md" />
-          <div className="w-64 h-64 bg-zinc-900 rounded-md" />
-          <div className="w-64 h-64 bg-zinc-900 rounded-md" />
-          <div className="w-64 h-64 bg-zinc-900 rounded-md" />
+        <section className="grid md:grid-cols-2 grid-cols-1 grid-rows-2 justify-center font-bold items-center gap-5 mt-10">
+          <div className="w-64 h-64 bg-zinc-950 rounded-md flex justify-center items-center">
+            INF.03 - 2021
+          </div>
+          <div className="w-64 h-64 bg-zinc-950 rounded-md flex justify-center items-center">
+            INF.04 - 2024
+          </div>
+          <div className="w-64 h-64 bg-zinc-950 rounded-md flex justify-center items-center text-center">
+            Multiple online courses and tutorials <br /> (Udemy, Youtube, etc.)
+          </div>
+          <div className="w-64 h-64 bg-zinc-950 rounded-md flex justify-center items-center">
+            Many fullstack projects
+          </div>
         </section>
       </article>
 

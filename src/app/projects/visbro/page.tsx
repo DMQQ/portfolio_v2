@@ -24,6 +24,14 @@ export default function VisbroPage() {
             {project?.description}
           </p>
 
+          <ul className="list-disc p-5">
+            <li>Translations for 10 languages</li>
+            <li>Multiple application forms</li>
+            <li>Ninox Cloud as backend service</li>
+            <li>Image optimalization</li>
+            <li>High Light house score</li>
+          </ul>
+
           <h2 className="text-2xl font-extrabold mt-5 mb-2 flex flex-col">
             <span className="text-base text-purple-800 font-bold">
               <span className="text-2xl">&#x2192;</span> Project stack
@@ -75,7 +83,7 @@ export default function VisbroPage() {
                 width={1100}
                 height={800}
                 alt="Previw"
-                className="w-full rounded-xl max-w-screen-md"
+                className="w-full max-w-screen-md"
               />
             ))}
           </div>
@@ -91,7 +99,7 @@ export default function VisbroPage() {
               width={1200}
               height={800}
               alt={src + " Preview"}
-              className="w-full rounded-md object-contain"
+              className="w-full rounded-md"
             />
           ))}
         </div>
