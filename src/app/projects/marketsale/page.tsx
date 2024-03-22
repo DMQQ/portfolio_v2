@@ -28,6 +28,30 @@ export default function ProjectPage() {
             {project?.description}
           </p>
 
+          <div className="w-full mt-10 flex flex-row gap-3 md:w-2/3">
+            <a
+              className="bg-zinc-950 text-white p-3 px-5 rounded-full w-full text-center"
+              target="_blank"
+              href="https://github.com/ZSEIT-Praktyki/Frontend"
+            >
+              Github (Mobile)
+            </a>
+            <a
+              href="https://github.com/ZSEIT-Praktyki/Backend"
+              className="bg-zinc-950 text-white p-3 px-5 rounded-full w-full text-center"
+              target="_blank"
+            >
+              Github (Backend)
+            </a>
+            <a
+              href="http://srv25.mikr.us:30163/"
+              className="bg-zinc-950 text-white p-3 px-5 rounded-full w-full text-center"
+              target="_blank"
+            >
+              Live
+            </a>
+          </div>
+
           <h2 className="text-2xl font-extrabold mt-5 mb-2 flex flex-col">
             <span className="text-base text-purple-800 font-bold">
               <span className="text-2xl">&#x2192;</span> Project stack

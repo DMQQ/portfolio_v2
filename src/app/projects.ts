@@ -219,7 +219,7 @@ export const projects: IProject[] = [
         "typescript.png",
         "react.png",
         "redux.webp",
-        "REDUX-TOOLKIT QUERY CLIENT",
+        "RTK query",
         "nextjs.png",
       ],
     },

@@ -225,7 +225,7 @@ export default function Home() {
               (2022) 1 month
             </h5>
             <p className="text-zinc-300 flex-1 mt-2">
-              During my intership i learned a lot about linux and it's
+              During my intership i learned a lot about linux and it&apos;s
               enviroment. We were taught how to set zabix monitoring system and
               how to use it. I also learned about the importance of security and
               how to secure a server.
