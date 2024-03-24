@@ -1,23 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
-import { projects } from "./projects";
+import { projects } from "../../projects";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Damian's Portfolio",
+  description: `Hi there! As a 20-year-old student from Poland, my passion for
+  building things for the web blossomed during my five years in a
+  programming-focused high school. While I gained foundational
+  knowledge there, my self-driven nature pushed me to delve deeper.`,
+  authors: [{ name: "Damian", url: "https://github.com/DMQQ" }],
+  creator: "Damian",
+  viewport: "width=device-width, initial-scale=1.0",
+  keywords:
+    "Fullstack, Developer, React, NextJS, TailwindCSS, Typescript, NodeJS, NestJS, MySQL, Redux, React Native, React Native, Rest, Graphql ,Junior, Poland, Olsztyn",
+};
 
 export default function Home() {
   return (
     <main>
       <article
         // mt-40
-        className="flex flex-col md:flex-row w-11/12 mx-auto min-h-screen items-center py-20 gap-5"
+        className="flex flex-col justify-center lg:flex-row w-11/12 mx-auto min-h-screen py-20 items-center gap-5"
       >
-        <section className="flex-[3] flex justify-start items-center">
+        <section className="lg:flex-[3] flex justify-start items-center">
           <h1 className="text-white font-extrabold text-6xl lg:text-7xl 2xl:text-8xl">
             Hello! I&apos;m <b>Damian</b>, a{" "}
             <span className="gradient-text">Full-Stack Developer</span> bringing
             ideas to life.
           </h1>
         </section>
-        <section className="flex flex-1 w-full justify-center items-center">
-          <div className="grid justify-evenly justify-items-center content-evenly items-center grid-cols-3 grid-rows-2 md:grid-cols-3 gap-5 md:grid-rows-3 w-full">
+        <section className="flex lg:flex-1 w-full justify-center items-center">
+          <div className="flex flex-row flex-wrap lg:grid justify-evenly justify-items-center content-evenly items-center grid-cols-3 grid-rows-2 md:grid-cols-3 gap-5 md:grid-rows-3 w-full">
             {[
               "typescript.png",
               "tailwindcss.png",
@@ -36,7 +50,7 @@ export default function Home() {
                 width={70}
                 height={70}
                 priority
-                className="align-middle w-12 md:w-[4.5rem] select-none"
+                className="align-middle w-10 lg:w-[4.5rem] select-none"
               />
             ))}
           </div>
@@ -65,37 +79,47 @@ export default function Home() {
               to navigate both mobile and web development landscapes. In the
               mobile realm, I&apos;m comfortable crafting engaging applications
               with{" "}
-              <span className="text-purple-600 font-bold">React Native</span>{" "}
+              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+                React Native
+              </span>{" "}
               and streamlining the process using{" "}
-              <span className="text-purple-600 font-bold">Expo</span>. For web
-              development, my toolbox includes React for dynamic interfaces,
-              <span className="text-purple-600 font-bold">
+              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+                Expo
+              </span>
+              . For web development, my toolbox includes React for dynamic
+              interfaces,
+              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
                 Tailwind CSS{" "}
               </span>{" "}
               for rapid styling,{" "}
-              <span className="text-purple-600 font-bold">NextJS</span> for
-              performance and SEO, and{" "}
-              <span className="text-purple-600 font-bold">Typescript</span> for
-              enhanced code maintainability and safety.
+              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+                NextJS
+              </span>{" "}
+              for performance and SEO, and{" "}
+              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+                Typescript
+              </span>{" "}
+              for enhanced code maintainability and safety.
             </p>
             <p className="text-zinc-200 mt-2 text-lg">
               But my expertise extends beyond the frontend. I&apos;m equally
               adept at building the backend with{" "}
-              <span className="text-purple-600 font-bold">NodeJS</span> and
-              structuring its logic using
-              <span className="text-purple-600 font-bold">NestJS</span>.
-              Additionally, I leverage the power of{" "}
-              <span className="text-purple-600 font-bold">MySQL</span> for data
-              management and utilize{" "}
-              <span className="text-purple-600 font-bold">TypeORM</span> to
-              simplify interactions with the database.
-            </p>
-            <p className="text-zinc-200 mt-2 text-lg">
-              This diverse skillset, coupled with my thirst for knowledge and
-              constant learning, positions me as a valuable asset for projects
-              and individuals who share my passion for technology and
-              innovation. Feel free to reach out – I&apos;m excited to
-              collaborate and explore new challenges!
+              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+                NodeJS
+              </span>{" "}
+              and structuring its logic using{" "}
+              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+                NestJS
+              </span>
+              . Additionally, I leverage the power of{" "}
+              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+                MySQL
+              </span>{" "}
+              for data management and utilize{" "}
+              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+                TypeORM
+              </span>{" "}
+              to simplify interactions with the database.
             </p>
           </div>
         </section>
@@ -154,7 +178,11 @@ export default function Home() {
                   ))}
                 </div>
 
-                <div className="flex flex-row flex-wrap gap-5 w-full mt-5 items-center ">
+                <span className="text-base text-purple-800 font-bold my-2">
+                  <span className="text-xl">&#x2192;</span> Tech stack
+                </span>
+
+                <div className="flex flex-row flex-wrap gap-5 w-full items-center ">
                   {Array.from(
                     new Set([
                       ...project.mainStack.frontend,
@@ -248,7 +276,7 @@ export default function Home() {
         </section>
       </article>
 
-      <article className="w-full p-5 md:w-11/12 mx-auto py-20 flex flex-col lg:flex-row justify-between items-center">
+      <article className="w-full hidden p-5 md:w-11/12 mx-auto py-20 flex flex-col lg:flex-row justify-between items-center">
         <section className="flex-1 flex flex-col">
           <h4 className="text-white text-5xl md:text-7xl font-extrabold flex flex-col">
             <span className="text-lg text-purple-800">
@@ -281,7 +309,7 @@ export default function Home() {
         <section className="mt-10">
           <form
             action=""
-            className="w-[calc(100vw-2.5rem)] max-w-[28rem] flex flex-col flex-1 bg-zinc-950 p-5 rounded-lg"
+            className="w-full max-w-[28rem] flex flex-col flex-1 bg-zinc-950 p-5 rounded-lg"
           >
             <h5 className="text-white text-5xl md:text-7xl font-extrabold flex flex-col mb-5">
               <span className="text-lg text-purple-800">

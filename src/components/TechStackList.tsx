@@ -4,8 +4,8 @@ export default function TechStackList(props: {
   list: string[];
   label: string;
 }) {
-  return (
-    <ul className="flex flex-row gap-5 items-center mt-3 bg-zinc-950 rounded-full p-3 px-6 w-auto">
+  return props.list.length > 0 ? (
+    <ul className="flex flex-row gap-5 items-center bg-zinc-950 rounded-full p-3 px-6 w-auto">
       {props?.list?.map((src) => (
         <li key={src}>
           {/\.(jpg|png|svg|webp)$/i.test(src) ? (
@@ -27,5 +27,5 @@ export default function TechStackList(props: {
         {props.label}
       </span>
     </ul>
-  );
+  ) : null;
 }

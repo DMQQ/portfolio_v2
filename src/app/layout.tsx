@@ -18,7 +18,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={inter.className}
+        style={
+          {
+            // backgroundImage: "url('/bg2.svg')",
+            // backgroundSize: "contain",
+            // backgroundAttachment: "fixed",
+          }
+        }
+      >
         <header className="w-full fixed flex flex-row p-5 top-0 left-0 justify-between bg-black z-50">
           <Link
             href="/"
@@ -32,12 +41,12 @@ export default function RootLayout({
               {["Overview", "Projects", "Education & Certificates"].map(
                 (label) => (
                   <li key={label}>
-                    <a
-                      href={`#${label.toLowerCase()}`}
+                    <Link
+                      href={`/#${label.toLowerCase()}`}
                       className="text-purple-400 hover:text-purple-600 transition-colors"
                     >
                       #{label}
-                    </a>
+                    </Link>
                   </li>
                 )
               )}
