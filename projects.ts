@@ -38,7 +38,7 @@ export const projects: IProject[] = [
     path: "visbro",
     name: "Recruiting company website",
     description:
-      "Recruiting company website - A NextJS Typescript project with serverless functions! App offers 10 native translations for many languages like Polish, German, English, Arabic and more. Many forms with Formik & Yup validation to offer the best User expirience. Images are well uptimized using next/image library and compressed to modern formats to decrease page size. Everything is connected with Ninox Low-Code platform using REST-API to safely keep the form data and to manage job offers",
+      "This project, developed with Next.js, Tailwind CSS, and Formik, incorporates multiple forms to enhance user interaction. Utilizing Next Intl for language translations in ten different languages, it ensures inclusivity and accessibility for a diverse audience. Leveraging the Ninox Cloud API as the backend service, the website caters to a German recruiting company with operations across various fields. The platform seamlessly integrates modern frontend technologies with robust backend solutions to deliver a user-centric experience tailored to the needs of a dynamic recruiting environment.",
     mainStack: {
       frontend: [
         "nextjs.png",
@@ -131,7 +131,7 @@ export const projects: IProject[] = [
       "Viewing recent purchases",
       "GraphQL/REST-API provided by backend server",
     ],
-    description: `React Native Shop App - FullStack project made in React Native with Expo and NestJS with MySQL database for server side. Ap has many features like authentication, account managment, in-app payments using Stripe API, product's cart managment, following product status and viewing recent purchases. Everything is handled via GraphQL/REST-API provided by my backend server.`,
+    description: `This project is a React Native application with a NestJS backend, offering seamless integration of features. It incorporates Stripe for in-app purchases, along with essential functionalities like a cart, watchlist, and purchase history. Robust account authentication ensures security and personalization for users. The modern, dark-themed design, crafted by me, enhances user experience and aesthetic appeal. This comprehensive solution merges cutting-edge technology with intuitive design for a dynamic user experience.`,
     mainStack: {
       frontend: [
         "typescript.png",
@@ -219,7 +219,7 @@ export const projects: IProject[] = [
       "Creating your own workouts and tracking your progress",
     ],
     description:
-      "Multipurpose app with all you need! Funds and expense tracking. Workout scheduling, tracking exercise progress, creating your own workouts. Calendar with push notifications, event tasks and more. App made in React-Native with Expo on mobile side and NestJS and MySQL on server side. As a http client app uses GraphQL.",
+      "This mobile app project integrates React Native for the frontend with a NestJS backend using GraphQL to interface with a MySQL database, ensuring efficient data management and retrieval. Offering an array of functionalities, it includes a calendar reminder with tasks and push notifications, a notes page for securely storing important information, a wallet feature to track expenses, and a workout screen for creating and monitoring fitness routines. With its seamless integration and robust features, this app provides users with a comprehensive and dynamic mobile experience tailored to their productivity and wellness needs.",
     mainStack: {
       backend: [
         "nestjs.svg",
@@ -324,7 +324,8 @@ export const projects: IProject[] = [
         "Stripe",
       ],
     },
-    description: `Market sale web-app is a fullstack project made in NextJS with TailwindCSS and NestJS with MySQL database. App offers many features like authentication, account managment, in-app payments using Stripe API, product's cart managment, following product status and viewing recent purchases. Everything is handled via REST-API provided by my backend server.`,
+    description: `This web application, developed using NEXT.js for the frontend and NestJS for the backend, incorporates TypeORM and REST API to efficiently interact with a MySQL database. Integrated with Stripe for secure payment processing, it facilitates smooth offer creation, sale, and management. Its responsive design and contemporary aesthetics ensure a user-friendly experience across various devices. With reliable user authentication, intuitive offer management features, and advanced search and filtering capabilities, this platform offers a comprehensive solution for seamless e-commerce interactions.
+    `,
     mainStack: {
       backend: [
         "nestjs.svg",

@@ -99,11 +99,12 @@ export default function Project({
           <div className={style.thumbnails}>
             {project?.thumbnails?.map((src, index) => (
               <Image
+                quality={100}
                 priority
                 key={src}
                 src={src}
-                width={1000}
-                height={800}
+                width={1400}
+                height={1000}
                 alt="Previw"
                 className="w-full rounded-md object-contain"
               />
