@@ -14,7 +14,7 @@ const ImageGrid = {
   mobile: {
     thumbnails: "grid grid-cols-1 sm:grid-cols-3 gap-5",
     images:
-      "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5",
+      "grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-5",
   },
   web: {
     thumbnails: "flex flex-col gap-5",
@@ -126,7 +126,7 @@ export default function Project({
           {project.links?.map((link) => (
             <a
               key={link.path}
-              className="bg-zinc-950 max-w-40 text-white p-3 px-3 rounded-full w-full text-center"
+              className="bg-zinc-950 text-zinc-300 justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
               target="_blank"
               href={link.path}
             >
@@ -135,16 +135,7 @@ export default function Project({
           ))}
         </div>
 
-        <div
-          className={
-            `${style.images}` +
-            (project.style === "mobile"
-              ? `xl:grid-cols-${
-                  project.images!.length - 1
-                } gap-3 2xl:grid-cols-${project.images?.length}`
-              : "")
-          }
-        >
+        <div className={`${style.images}`}>
           {project?.images?.map((src, index) => (
             <Image
               priority

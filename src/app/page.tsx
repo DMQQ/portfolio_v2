@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import { projects } from "../../projects";
 import { Metadata } from "next";
@@ -11,49 +11,84 @@ export const metadata: Metadata = {
   knowledge there, my self-driven nature pushed me to delve deeper.`,
   authors: [{ name: "Damian", url: "https://github.com/DMQQ" }],
   creator: "Damian",
-  viewport: "width=device-width, initial-scale=1.0",
   keywords:
     "Fullstack, Developer, React, NextJS, TailwindCSS, Typescript, NodeJS, NestJS, MySQL, Redux, React Native, React Native, Rest, Graphql ,Junior, Poland, Olsztyn",
 };
+
+import mysql from "../../public/tech/mysql.png";
+import nestjs from "../../public/tech/nestjs.svg";
+import nextjs from "../../public/tech/nextjs.png";
+import nodejs from "../../public/tech/nodejs.png";
+import react from "../../public/tech/react.png";
+import react_native from "../../public/tech/react_native.svg";
+import redux from "../../public/tech/redux.webp";
+import tailwindcss from "../../public/tech/tailwindcss.png";
+import typescript from "../../public/tech/typescript.png";
 
 export default function Home() {
   return (
     <main>
       <article
         // mt-40
-        className="flex flex-col justify-center lg:flex-row w-11/12 mx-auto min-h-screen py-20 items-center gap-5"
+        className="flex flex-col justify-center w-11/12 mx-auto min-h-screen py-20 items-center gap-5"
       >
-        <section className="lg:flex-[3] flex justify-start items-center">
-          <h1 className="text-white font-extrabold text-6xl lg:text-7xl 2xl:text-8xl">
-            Hello! I&apos;m <b>Damian</b>, a{" "}
-            <span className="gradient-text">Full-Stack Developer</span> bringing
-            ideas to life.
-          </h1>
-        </section>
-        <section className="flex lg:flex-1 w-full justify-center items-center">
-          <div className="flex flex-row flex-wrap lg:grid justify-evenly justify-items-center content-evenly items-center grid-cols-3 grid-rows-2 md:grid-cols-3 gap-5 md:grid-rows-3 w-full">
-            {[
-              "typescript.png",
-              "tailwindcss.png",
-              "react.png",
-              "react_native.svg",
-              "nextjs.png",
-              "nestjs.svg",
-              "nodejs.png",
-              "mysql.png",
-              "redux.webp",
-            ].map((tech) => (
-              <Image
-                key={tech}
-                src={"/tech/" + tech}
-                alt="Technology"
-                width={70}
-                height={70}
-                priority
-                className="align-middle w-10 lg:w-[4.5rem] select-none"
-              />
-            ))}
-          </div>
+        <div className="flex flex-col lg:flex-row">
+          <section className="lg:flex-[3] flex justify-start items-center">
+            <h1 className="text-white font-extrabold text-5xl xs:text-6xl md:text-6xl lg:text-7xl 2xl:text-8xl">
+              Hello! I&apos;m <b>Damian</b>, a{" "}
+              <span className="gradient-text">Full-Stack Developer</span>{" "}
+              bringing ideas to life.
+            </h1>
+          </section>
+          <section className="flex lg:flex-1 w-full justify-center items-center">
+            <div className="grid mt-2 justify-evenly justify-items-center content-evenly items-center grid-cols-5 grid-rows-2 lg:grid-cols-3 gap-5 lg:grid-rows-3 w-full">
+              {(
+                [
+                  mysql,
+                  nestjs,
+                  nextjs,
+                  nodejs,
+                  react,
+                  react_native,
+                  redux,
+                  tailwindcss,
+                  typescript,
+                ] as StaticImageData[]
+              ).map((tech, index) => (
+                <Image
+                  key={index}
+                  src={tech.src}
+                  alt="Technology"
+                  width={50}
+                  height={50}
+                  priority
+                  blurDataURL={tech.blurDataURL}
+                  className={`align-middle w-10 h-auto lg:w-[4.5rem] select-none `}
+                />
+              ))}
+            </div>
+          </section>
+        </div>
+        <section className="flex flex-col 2xs:flex-row 2xs:items-center 2xs:justify-center w-full gap-3 mt-5">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/DMQQ"
+            className="bg-zinc-950 text-zinc-300 justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
+          >
+            <img
+              src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/github-512.png"
+              alt="GH icon"
+              className="w-6 h-6 inline-block mr-1 invert"
+            />
+            Github
+          </a>
+          <a
+            className="bg-zinc-950 text-zinc-300 justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
+            href="mailto:damianderlecki04@gmail.com"
+          >
+            Message me via email
+          </a>
         </section>
       </article>
       <article
@@ -89,7 +124,7 @@ export default function Home() {
               . For web development, my toolbox includes React for dynamic
               interfaces,
               <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
-                Tailwind CSS{" "}
+                Tailwind CSS
               </span>{" "}
               for rapid styling,{" "}
               <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
@@ -123,7 +158,7 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <section className="flex-1 flex flex-shrink-0 justify-center p-5 items-center w-full">
+        <section className="flex-1 flex flex-shrink-0 justify-center items-center w-full">
           <Image
             src={"/13795589_5370986.svg"}
             width={900}
@@ -134,7 +169,7 @@ export default function Home() {
         </section>
       </article>
 
-      <h3 className="text-start text-5xl w-11/12 mx-auto px-3 md:text-7xl font-extrabold flex flex-col">
+      <h3 className="text-start text-5xl w-11/12 mx-auto px-3 md:text-7xl font-extrabold flex flex-col ">
         <a
           href="https://github.com/DMQQ"
           rel="nofollow"
@@ -143,8 +178,9 @@ export default function Home() {
         >
           <span className="text-2xl">&#x2192;</span> View Github
         </a>{" "}
-        My Projects and things i{" "}
-        <span className="gradient-text">contributed to</span>
+        <span className="gradient-text">
+          <span className="text-white">My</span> Projects
+        </span>
       </h3>
 
       <article
@@ -167,7 +203,7 @@ export default function Home() {
                   {project.description}
                 </p>
 
-                <div className="flex flex-row snap-x gap-5 mt-5 overflow-scroll md:overflow-hidden  pb-3">
+                {/* <div className="flex flex-row snap-x gap-5 mt-5 overflow-scroll md:overflow-hidden  pb-3">
                   {project.thumbnails?.map((src) => (
                     <img
                       key={src}
@@ -176,7 +212,7 @@ export default function Home() {
                       className="max-w-40 max-h-24 object-contain"
                     />
                   ))}
-                </div>
+                </div> */}
 
                 <span className="text-base text-purple-800 font-bold my-2">
                   <span className="text-xl">&#x2192;</span> Tech stack
@@ -210,7 +246,10 @@ export default function Home() {
         ))}
       </article>
 
-      <article className="w-full p-5 md:w-11/12 mx-auto py-20 flex min-h-screen flex-col lg:flex-row justify-center items-center">
+      <article
+        id="education"
+        className="w-full p-5 md:w-11/12 mx-auto py-20 flex min-h-screen flex-col xl:flex-row justify-center items-center"
+      >
         <section className="flex-1 flex flex-col">
           <h4 className="text-white text-5xl md:text-7xl font-extrabold flex flex-col">
             <span className="text-lg text-purple-800">
@@ -219,7 +258,7 @@ export default function Home() {
             Education & <span className="gradient-text">Expirience</span>
           </h4>
 
-          <div className="w-full mt-5 lg:w-2/3">
+          <div className="w-full mt-5 xl:w-2/3">
             <h5 className="text-xl">
               Zespół szkół elektronicznych i telekomunikacyjnych in Olsztyn,
               Poland <br /> (2019-2024)
@@ -260,17 +299,17 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <section className="grid md:grid-cols-2 grid-cols-1 grid-rows-2 justify-center font-bold items-center gap-5 mt-10">
-          <div className="w-64 h-64 bg-zinc-950 rounded-md flex justify-center items-center">
+        <section className="grid grid-cols-1 2xs:grid-cols-2 sm:grid-cols-4 xl:grid-cols-2 justify-center font-bold items-center gap-5 mt-10">
+          <div className="h-56 bg-zinc-950 rounded-md flex justify-center items-center">
             INF.03 - 2021
           </div>
-          <div className="w-64 h-64 bg-zinc-950 rounded-md flex justify-center items-center">
+          <div className="h-56 bg-zinc-950 rounded-md flex justify-center items-center">
             INF.04 - 2024
           </div>
-          <div className="w-64 h-64 bg-zinc-950 rounded-md flex justify-center items-center text-center">
-            Multiple online courses and tutorials <br /> (Udemy, Youtube, etc.)
+          <div className="h-56 bg-zinc-950 rounded-md flex justify-center items-center text-center p-5">
+            Multiple online courses <br /> and tutorials
           </div>
-          <div className="w-64 h-64 bg-zinc-950 rounded-md flex justify-center items-center">
+          <div className="h-56 bg-zinc-950 rounded-md flex justify-center items-center text-center">
             Many fullstack projects
           </div>
         </section>
@@ -359,11 +398,20 @@ export default function Home() {
         </section>
       </article>
 
-      <footer className="text-zinc-600 p-5">
-        <a href="https://www.freepik.com/free-vector/video-game-developer-concept-illustration_13795589.htm#query=developer%20illustration&position=14&from_view=keyword&track=ais&uuid=561481ad-317f-4c32-a284-8247369f0008">
-          Image by storyset
-        </a>{" "}
-        on Freepik
+      <footer className="text-zinc-600 p-5 flex flex-wrap flex-row justify-between">
+        <p className="">Damian Derlecki</p>
+        <p className="">Olsztyn, Poland</p>
+
+        <a href="mailto:damianderlecki04@gmail.com">
+          Email damianderlecki04@gmail.com
+        </a>
+        <a href="https://github.com/DMQQ">Github: DMQQ</a>
+        <p>
+          <a href="https://www.freepik.com/free-vector/video-game-developer-concept-illustration_13795589.htm#query=developer%20illustration&position=14&from_view=keyword&track=ais&uuid=561481ad-317f-4c32-a284-8247369f0008">
+            Image by storyset
+          </a>{" "}
+          on Freepik
+        </p>
       </footer>
     </main>
   );

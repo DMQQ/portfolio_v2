@@ -38,18 +38,16 @@ export default function RootLayout({
 
           <nav className="w-auto hidden lg:flex">
             <ul className="flex gap-5 items-center">
-              {["Overview", "Projects", "Education & Certificates"].map(
-                (label) => (
-                  <li key={label}>
-                    <Link
-                      href={`/#${label.toLowerCase()}`}
-                      className="text-purple-400 hover:text-purple-600 transition-colors"
-                    >
-                      #{label}
-                    </Link>
-                  </li>
-                )
-              )}
+              {["Overview", "Projects", "Education"].map((label) => (
+                <li key={label}>
+                  <Link
+                    href={`/#${label.toLowerCase()}`}
+                    className="text-purple-400 hover:text-purple-600 transition-colors"
+                  >
+                    #{label}
+                  </Link>
+                </li>
+              ))}
               <li>
                 <button className="px-4 py-2 rounded-full bg-purple-950 text-purple-200 hover:bg-purple-900 hover:text-purple-100 transition-colors">
                   Contact Me
