@@ -76,8 +76,12 @@ export default function Home() {
             href="https://github.com/DMQQ"
             className="bg-zinc-950 text-zinc-300 justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
           >
-            <img
-              src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/github-512.png"
+            <Image
+              width={24}
+              height={24}
+              quality={90}
+              priority
+              src="/gh-icon.webp"
               alt="GH icon"
               className="w-6 h-6 inline-block mr-1 invert"
             />
