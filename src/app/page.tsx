@@ -35,7 +35,7 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row">
           <section className="lg:flex-[3] flex justify-start items-center">
             <h1 className="text-white font-extrabold text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl">
-              Hello! I&apos;m <b>Damian</b>, a{" "}
+              Hello! I&apos;m Damian, a{" "}
               <span className="gradient-text">Full-Stack Developer</span>{" "}
               bringing ideas to life.
             </h1>
@@ -83,7 +83,7 @@ export default function Home() {
               priority
               src="/gh-icon.webp"
               alt="GH icon"
-              className="w-6 h-6 inline-block mr-1 invert"
+              className="w-6 h-6 inline-block invert"
             />
             Github
           </a>
@@ -92,7 +92,7 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
             href="/Damian Derlecki CV EN.pdf"
-            className=" text-white bg-orange-600 justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
+            className=" text-white bg-gradient-to-b from-orange-600 to-red-600 justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
           >
             📑 Show CV
           </a>
@@ -101,7 +101,7 @@ export default function Home() {
             className="bg-zinc-900 text-zinc-300 justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
             href="mailto:damianderlecki04@gmail.com"
           >
-            Message me 👊
+            👊 Message me
           </a>
         </section>
       </article>
@@ -119,7 +119,7 @@ export default function Home() {
           </h2>
 
           <div className="w-full">
-            <p className="text-zinc-200 mt-2 text-lg">
+            <p className="text-zinc-200 mt-2 text-lg text-balance">
               Hi there! As a 20-year-old student from Poland, my passion for
               building things for the web blossomed during my five years in a
               programming-focused high school. While I gained foundational
@@ -128,24 +128,24 @@ export default function Home() {
               to navigate both mobile and web development landscapes. In the
               mobile realm, I&apos;m comfortable crafting engaging applications
               with{" "}
-              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
+              <span className=" text-orange-700 text-lg font-bold  px-1 rounded-full py-0.5">
                 React Native
               </span>{" "}
               and streamlining the process using{" "}
-              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
+              <span className=" text-orange-700 text-lg font-bold  px-1 rounded-full py-0.5">
                 Expo
               </span>
               . For web development, my toolbox includes React for dynamic
               interfaces,{" "}
-              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
+              <span className=" text-orange-700 text-lg font-bold  px-1 rounded-full py-0.5">
                 Tailwind CSS
               </span>{" "}
               for rapid styling,{" "}
-              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
+              <span className=" text-orange-700 text-lg font-bold  px-1 rounded-full py-0.5">
                 NextJS
               </span>{" "}
               for performance and SEO, and{" "}
-              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
+              <span className=" text-orange-700 text-lg font-bold  px-1 rounded-full py-0.5">
                 Typescript
               </span>{" "}
               for enhanced code maintainability and safety.
@@ -153,19 +153,19 @@ export default function Home() {
             <p className="text-zinc-200 mt-2 text-lg">
               But my expertise extends beyond the frontend. I&apos;m equally
               adept at building the backend with{" "}
-              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
+              <span className=" text-orange-700 text-lg font-bold  px-1 rounded-full py-0.5">
                 NodeJS
               </span>{" "}
               and structuring its logic using{" "}
-              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
+              <span className=" text-orange-700 text-lg font-bold  px-1 rounded-full py-0.5">
                 NestJS
               </span>
               . Additionally, I leverage the power of{" "}
-              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
+              <span className=" text-orange-700 text-lg font-bold  px-1 rounded-full py-0.5">
                 MySQL
               </span>{" "}
               for data management and utilize{" "}
-              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
+              <span className=" text-orange-700 text-lg font-bold  px-1 rounded-full py-0.5">
                 TypeORM
               </span>{" "}
               to simplify interactions with the database.
