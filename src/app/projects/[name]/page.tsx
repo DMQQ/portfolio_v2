@@ -129,7 +129,7 @@ export default function Project({
           {project.links?.map((link) => (
             <a
               key={link.path}
-              className="bg-zinc-950 text-zinc-300 justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
+              className="bg-zinc-900 text-zinc-300 justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
               target="_blank"
               href={link.path}
             >
@@ -141,7 +141,6 @@ export default function Project({
         <section className={`${style.images}`}>
           {project?.images?.map((src, index) => (
             <Image
-              priority
               key={src}
               src={src}
               width={project.style === "web" ? 1400 : 400}

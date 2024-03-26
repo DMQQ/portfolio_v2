@@ -74,7 +74,7 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
             href="https://github.com/DMQQ"
-            className="bg-zinc-950 text-zinc-300 justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
+            className="bg-zinc-900 text-zinc-300 justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
           >
             <Image
               width={24}
@@ -98,7 +98,7 @@ export default function Home() {
           </a>
 
           <a
-            className="bg-zinc-950 text-zinc-300 justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
+            className="bg-zinc-900 text-zinc-300 justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
             href="mailto:damianderlecki04@gmail.com"
           >
             Message me 👊
