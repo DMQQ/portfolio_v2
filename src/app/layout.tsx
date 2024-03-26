@@ -19,11 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <header className="w-full fixed flex flex-row px-5 py-3 top-0 left-0 items-center justify-between bg-black z-50">
-          <Link
-            href="/"
-            className="bg-gradient-to-l font-extrabold text-xl from-blue-500 to-purple-500 inline-block text-transparent bg-clip-text"
-          >
+        <header className="w-full fixed flex flex-row px-5 py-4 top-0 left-0 items-center justify-between bg-black z-50">
+          <Link href="/" className="font-extrabold text-xl gradient-text">
             Damian FullStackDev
           </Link>
 
@@ -33,14 +30,14 @@ export default function RootLayout({
                 <li key={label}>
                   <Link
                     href={`/#${label.toLowerCase()}`}
-                    className="text-purple-400 hover:text-purple-600 transition-colors"
+                    className="text-orange-600 hover:text-orange-700 transition-colors"
                   >
                     #{label}
                   </Link>
                 </li>
               ))}
               <li>
-                <button className="px-4 py-1.5 rounded-full bg-purple-950 text-purple-200 hover:bg-purple-900 hover:text-purple-100 transition-colors">
+                <button className="px-4 py-1.5 rounded-full bg-orange-800 text-white hover:bg-orange-700  transition-colors">
                   Contact Me
                 </button>
               </li>

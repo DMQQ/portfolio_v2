@@ -34,7 +34,7 @@ export default function Home() {
       >
         <div className="flex flex-col lg:flex-row">
           <section className="lg:flex-[3] flex justify-start items-center">
-            <h1 className="text-white font-extrabold text-5xl xs:text-6xl md:text-6xl lg:text-7xl 2xl:text-8xl">
+            <h1 className="text-white font-extrabold text-5xl md:text-6xl lg:text-7xl 2xl:text-8xl">
               Hello! I&apos;m <b>Damian</b>, a{" "}
               <span className="gradient-text">Full-Stack Developer</span>{" "}
               bringing ideas to life.
@@ -92,9 +92,9 @@ export default function Home() {
             target="_blank"
             rel="noreferrer"
             href="/Damian Derlecki CV EN.pdf"
-            className=" text-black bg-green-600  justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
+            className=" text-white bg-orange-600 justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
           >
-            Show CV
+            📑 Show CV
           </a>
 
           <a
@@ -111,7 +111,7 @@ export default function Home() {
       >
         <section className="flex-1">
           <h2 className="text-5xl md:text-7xl font-extrabold">
-            <span className="text-lg text-purple-800">
+            <span className="text-lg text-orange-600">
               <span className="text-2xl">&#x2192;</span> About me
             </span>{" "}
             <br />
@@ -128,24 +128,24 @@ export default function Home() {
               to navigate both mobile and web development landscapes. In the
               mobile realm, I&apos;m comfortable crafting engaging applications
               with{" "}
-              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
                 React Native
               </span>{" "}
               and streamlining the process using{" "}
-              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
                 Expo
               </span>
               . For web development, my toolbox includes React for dynamic
-              interfaces,
-              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+              interfaces,{" "}
+              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
                 Tailwind CSS
               </span>{" "}
               for rapid styling,{" "}
-              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
                 NextJS
               </span>{" "}
               for performance and SEO, and{" "}
-              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
                 Typescript
               </span>{" "}
               for enhanced code maintainability and safety.
@@ -153,19 +153,19 @@ export default function Home() {
             <p className="text-zinc-200 mt-2 text-lg">
               But my expertise extends beyond the frontend. I&apos;m equally
               adept at building the backend with{" "}
-              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
                 NodeJS
               </span>{" "}
               and structuring its logic using{" "}
-              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
                 NestJS
               </span>
               . Additionally, I leverage the power of{" "}
-              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
                 MySQL
               </span>{" "}
               for data management and utilize{" "}
-              <span className="bg-purple-800 text-white px-2 rounded-full text-base py-0.5">
+              <span className="bg-orange-700 text-white px-2 rounded-full text-base py-0.5">
                 TypeORM
               </span>{" "}
               to simplify interactions with the database.
@@ -188,11 +188,11 @@ export default function Home() {
           href="https://github.com/DMQQ"
           rel="nofollow"
           target="_blank"
-          className="text-lg text-purple-800"
+          className="text-lg text-orange-600"
         >
           <span className="text-2xl">&#x2192;</span> View Github
-        </a>{" "}
-        <span className="gradient-text">
+        </a>
+        <span className="gradient-text max-w-lg">
           <span className="text-white">My</span> Projects
         </span>
       </h3>
@@ -203,10 +203,10 @@ export default function Home() {
       >
         {projects.map((project) => (
           <Link href={"/projects/" + project.path} key={project.name}>
-            <section className="hover:ring-2 h-full hover:ring-purple-700 md:p-3 transition-colors duration-300 ease-in-out rounded-lg">
+            <section className="hover:ring-2 h-full hover:ring-orange-700 md:p-3 transition-colors duration-300 ease-in-out rounded-lg">
               <div className="bg-zinc-950 flex flex-col h-full px-4 pb-3 rounded-lg">
                 <h3 className="text-white text-3xl font-extrabold">
-                  <span className="text-base text-purple-800 font-bold">
+                  <span className="text-base text-orange-600 font-bold">
                     <span className="text-2xl">&#x2192;</span> Project name
                   </span>
                   <br />
@@ -217,7 +217,7 @@ export default function Home() {
                   {project.description}
                 </p>
 
-                <span className="text-base text-purple-800 font-bold my-2">
+                <span className="text-base text-orange-600 font-bold my-2">
                   <span className="text-xl">&#x2192;</span> Tech stack
                 </span>
 
@@ -255,10 +255,11 @@ export default function Home() {
       >
         <section className="flex-1 flex flex-col">
           <h4 className="text-white text-5xl md:text-7xl font-extrabold flex flex-col">
-            <span className="text-lg text-purple-800">
+            <span className="text-lg text-orange-600">
               <span className="text-2xl">&#x2192;</span> Education
             </span>{" "}
-            Education & <span className="gradient-text">Expirience</span>
+            Education &{" "}
+            <span className="gradient-text max-w-sm">Expirience</span>
           </h4>
 
           <div className="w-full mt-5 xl:w-2/3">
@@ -276,7 +277,7 @@ export default function Home() {
 
             <h5 className="text-xl mt-5">
               Internship at{" "}
-              <span className="text-purple-600 font-bold">ARTNEO</span> (2022) 1
+              <span className="text-orange-600 font-bold">ARTNEO</span> (2022) 1
               month
             </h5>
             <p className="text-zinc-300 flex-1 mt-2">
@@ -289,7 +290,7 @@ export default function Home() {
 
             <h5 className="text-xl mt-5">
               Internship at{" "}
-              <span className="text-purple-600 font-bold">
+              <span className="text-orange-600 font-bold">
                 Wirtualna Polska (WP Media S.A.)
               </span>{" "}
               (2022) 1 month
@@ -321,7 +322,7 @@ export default function Home() {
       <article className="w-full hidden p-5 md:w-11/12 mx-auto py-20 flex flex-col lg:flex-row justify-between items-center">
         <section className="flex-1 flex flex-col">
           <h4 className="text-white text-5xl md:text-7xl font-extrabold flex flex-col">
-            <span className="text-lg text-purple-800">
+            <span className="text-lg text-orange-600">
               <span className="text-2xl">&#x2192;</span> Contact
             </span>{" "}
             Contact <br /> <span className="gradient-text">me!</span>
@@ -354,7 +355,7 @@ export default function Home() {
             className="w-full max-w-[28rem] flex flex-col flex-1 bg-zinc-950 p-5 rounded-lg"
           >
             <h5 className="text-white text-5xl md:text-7xl font-extrabold flex flex-col mb-5">
-              <span className="text-lg text-purple-800">
+              <span className="text-lg text-orange-600">
                 <span className="text-2xl">&#x2192;</span> Message me
               </span>{" "}
             </h5>
@@ -366,7 +367,7 @@ export default function Home() {
                 type="text"
                 required
                 id="subject"
-                className="bg-zinc-900 rounded-md p-2 text-purple-600 ring-2 focus:ring-purple-800 outline-none ring-zinc-800"
+                className="bg-zinc-900 rounded-md p-2 text-orange-600 ring-2 focus:ring-purple-800 outline-none ring-zinc-800"
               />
             </div>
             <div className="flex flex-col mt-5">
@@ -377,7 +378,7 @@ export default function Home() {
                 type="email"
                 required
                 id="email"
-                className="bg-zinc-900 rounded-md p-2 text-purple-600 ring-2 focus:ring-purple-800 outline-none ring-zinc-800"
+                className="bg-zinc-900 rounded-md p-2 text-orange-600 ring-2 focus:ring-purple-800 outline-none ring-zinc-800"
               />
             </div>
             <div className="flex flex-col mt-5">
@@ -388,7 +389,7 @@ export default function Home() {
                 rows={10}
                 required
                 id="message"
-                className="bg-zinc-900 rounded-md p-2 text-purple-600 ring-2 focus:ring-purple-800 outline-none ring-zinc-800 resize-none"
+                className="bg-zinc-900 rounded-md p-2 text-orange-600 ring-2 focus:ring-purple-800 outline-none ring-zinc-800 resize-none"
               />
             </div>
             <button

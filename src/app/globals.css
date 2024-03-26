@@ -14,8 +14,8 @@ body {
 }
 
 .gradient-text {
-  @apply bg-gradient-to-r from-blue-600 to-pink-700 inline-block text-transparent bg-clip-text;
-  /* @apply bg-gradient-to-r from-cyan-500 to-pink-700 inline-block text-transparent bg-clip-text; */
+  /* @apply bg-gradient-to-r from-blue-600 to-pink-700 inline-block text-transparent bg-clip-text; */
+  @apply bg-gradient-to-r from-orange-500 via-red-500 to-pink-700 inline-block text-transparent bg-clip-text;
 }
 
 .row-2 {

@@ -38,7 +38,7 @@ export default function Project({
       <main className="pt-28 pb-10 flex flex-col xl:flex-row justify-center p-5 min-h-screen w-full md:w-11/12 mx-auto gap-5">
         <section className="flex-1 w-full flex flex-col items-start">
           <h1 className="text-4xl md:text-6xl font-extrabold text-white flex flex-col">
-            <span className="text-base text-purple-800 font-bold">
+            <span className="text-base text-orange-600 font-bold">
               <span className="text-2xl">&#x2192;</span> Project name
             </span>
             {project.name}
@@ -55,7 +55,7 @@ export default function Project({
           </ul>
 
           <h2 className="text-2xl font-extrabold mt-2 mb-2 flex flex-col">
-            <span className="text-base text-purple-800 font-bold">
+            <span className="text-base text-orange-600 font-bold">
               <span className="text-2xl">&#x2192;</span> Project stack
             </span>
           </h2>
@@ -71,7 +71,7 @@ export default function Project({
 
           <div className="w-full md:w-5/6 mt-2">
             <h2 className="text-2xl font-extrabold mb-2 flex flex-col">
-              <span className="text-base text-purple-800 font-bold">
+              <span className="text-base text-orange-600 font-bold">
                 <span className="text-2xl">&#x2192;</span> Used libraries
               </span>
             </h2>
@@ -116,13 +116,13 @@ export default function Project({
 
       <main className="flex flex-col justify-center p-5 w-full md:w-11/12 mx-auto gap-5 min-h-screen mt-20">
         <h1 className="text-4xl md:text-6xl font-extrabold text-white flex flex-col">
-          <span className="text-base text-purple-800 font-bold">
+          <span className="text-base text-orange-600 font-bold">
             <span className="text-2xl">&#x2192;</span> Preview
           </span>
-          Project preview images
+          Project preview <span className="gradient-text max-w-sm">images</span>
         </h1>
 
-        <span className="text-base text-purple-800 font-bold flex flex-row items-center gap-2">
+        <span className="text-base text-orange-600 font-bold flex flex-row items-center gap-2">
           <span className="text-2xl">&#x2192;</span> Links
         </span>
         <div className="w-full flex flex-col sm:flex-row md:w-1/2 gap-3">
