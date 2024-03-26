@@ -2,28 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #000;
+  color: #fff;
 }
 
 @layer utilities {
@@ -33,7 +14,8 @@ body {
 }
 
 .gradient-text {
-  @apply bg-gradient-to-r from-blue-600 via-pink-700  to-purple-700 inline-block text-transparent bg-clip-text;
+  @apply bg-gradient-to-r from-blue-600 to-pink-700 inline-block text-transparent bg-clip-text;
+  /* @apply bg-gradient-to-r from-cyan-500 to-pink-700 inline-block text-transparent bg-clip-text; */
 }
 
 .row-2 {

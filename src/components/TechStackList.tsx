@@ -5,7 +5,7 @@ export default function TechStackList(props: {
   label: string;
 }) {
   return props.list.length > 0 ? (
-    <ul className="flex flex-row flex-wrap gap-5 items-center bg-zinc-950 rounded-full p-3 px-6 w-auto">
+    <ul className="flex flex-row flex-wrap gap-5 items-center bg-zinc-950 rounded-lg sm:rounded-full p-3 px-6 w-auto">
       {props?.list?.map((src) => (
         <li key={src}>
           {/\.(jpg|png|svg|webp)$/i.test(src) ? (

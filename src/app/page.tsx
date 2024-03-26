@@ -83,11 +83,21 @@ export default function Home() {
             />
             Github
           </a>
+
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="/Damian Derlecki CV EN.pdf"
+            className=" text-black bg-green-600  justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
+          >
+            Show CV
+          </a>
+
           <a
             className="bg-zinc-950 text-zinc-300 justify-center flex flex-row items-center gap-2 rounded-xl px-5 py-3"
             href="mailto:damianderlecki04@gmail.com"
           >
-            Message me via email
+            Message me 👊
           </a>
         </section>
       </article>
@@ -169,7 +179,7 @@ export default function Home() {
         </section>
       </article>
 
-      <h3 className="text-start text-5xl w-11/12 mx-auto px-3 md:text-7xl font-extrabold flex flex-col ">
+      <h3 className="text-start text-5xl w-11/12 mx-auto px-5 md:text-7xl font-extrabold flex flex-col ">
         <a
           href="https://github.com/DMQQ"
           rel="nofollow"
@@ -185,7 +195,7 @@ export default function Home() {
 
       <article
         id="projects"
-        className="w-full p-5 md:w-11/12 mx-auto py-20 grid grid-cols-1 grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-5"
+        className="w-full p-3 md:p-5 md:w-11/12 mx-auto mt-5 grid grid-cols-1 grid-rows-4 lg:grid-cols-2 lg:grid-rows-2 gap-5"
       >
         {projects.map((project) => (
           <Link href={"/projects/" + project.path} key={project.name}>
@@ -202,17 +212,6 @@ export default function Home() {
                 <p className="text-zinc-200 mt-2 flex-1">
                   {project.description}
                 </p>
-
-                {/* <div className="flex flex-row snap-x gap-5 mt-5 overflow-scroll md:overflow-hidden  pb-3">
-                  {project.thumbnails?.map((src) => (
-                    <img
-                      key={src}
-                      src={src}
-                      alt=""
-                      className="max-w-40 max-h-24 object-contain"
-                    />
-                  ))}
-                </div> */}
 
                 <span className="text-base text-purple-800 font-bold my-2">
                   <span className="text-xl">&#x2192;</span> Tech stack

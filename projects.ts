@@ -273,8 +273,8 @@ export const projects: IProject[] = [
     ],
   },
   {
-    name: "Market sale web-app",
-    path: "marketsale",
+    name: "Marketplace web-app",
+    path: "marketplace",
 
     style: "web",
 

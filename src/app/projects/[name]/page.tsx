@@ -18,7 +18,7 @@ const ImageGrid = {
   },
   web: {
     thumbnails: "flex flex-col gap-5",
-    images: "flex flex-row flex-wrap gap-5 mt-5",
+    images: "grid grid-cols-1 lg:grid-cols-2 gap-5",
   },
 };
 
@@ -35,7 +35,7 @@ export default function Project({
 
   return (
     <main className="w-full h-full">
-      <main className="pt-28 pb-10 flex flex-col lg:flex-row justify-center p-5 w-screen md:w-11/12 mx-auto gap-5">
+      <main className="pt-28 pb-10 flex flex-col xl:flex-row justify-center p-5 min-h-screen w-full md:w-11/12 mx-auto gap-5">
         <section className="flex-1 w-full flex flex-col items-start">
           <h1 className="text-4xl md:text-6xl font-extrabold text-white flex flex-col">
             <span className="text-base text-purple-800 font-bold">
@@ -44,23 +44,23 @@ export default function Project({
             {project.name}
           </h1>
 
-          <p className="w-full md:w-3/4 mt-2 text-zinc-200">
+          <p className="w-full md:w-5/6 mt-2 text-zinc-300">
             {project?.description}
           </p>
 
-          <ul className="mt-5 list-disc px-5">
+          <ul className="mt-2 list-disc px-5">
             {project.bullets?.map((bullet) => (
               <li key={bullet}>{bullet}</li>
             ))}
           </ul>
 
-          <h2 className="text-2xl font-extrabold mt-5 mb-2 flex flex-col">
+          <h2 className="text-2xl font-extrabold mt-2 mb-2 flex flex-col">
             <span className="text-base text-purple-800 font-bold">
               <span className="text-2xl">&#x2192;</span> Project stack
             </span>
           </h2>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-row flex-wrap 2xl:flex-row gap-2">
             <TechStackList
               label="Frontend"
               list={project?.mainStack.frontend!}
@@ -69,33 +69,34 @@ export default function Project({
             <TechStackList label="Backend" list={project?.mainStack.backend!} />
           </div>
 
-          <h2 className="text-2xl font-extrabold mt-5 mb-2 flex flex-col">
-            <span className="text-base text-purple-800 font-bold">
-              <span className="text-2xl">&#x2192;</span> Used libraries
-            </span>
-          </h2>
+          <div className="w-full md:w-5/6 mt-2">
+            <h2 className="text-2xl font-extrabold mb-2 flex flex-col">
+              <span className="text-base text-purple-800 font-bold">
+                <span className="text-2xl">&#x2192;</span> Used libraries
+              </span>
+            </h2>
 
-          <div className="flex w-full gap-5">
-            <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 items-center bg-zinc-950 rounded-xl p-3 w-auto">
-              {project?.additionalLibraries.frontend.map((text) => (
-                <li key={text} className="uppercase text-sm font-medium">
+            <div className="flex flex-row flex-wrap w-full gap-2">
+              {[
+                ...project?.additionalLibraries.frontend,
+                ...project?.additionalLibraries.backend,
+              ].map((text, index) => (
+                <span
+                  key={index}
+                  className="uppercase text-sm font-medium px-3 py-1 bg-zinc-950 rounded-lg"
+                >
                   {text}
-                </li>
+                </span>
               ))}
-            </ul>
-
-            {project?.additionalLibraries.backend.length !== 0 && (
-              <ul className="grid h-full grid-cols-1 md:grid-cols-2 gap-3 items-center bg-zinc-950 rounded-xl p-3 w-auto">
-                {project?.additionalLibraries.backend.map((text) => (
-                  <li key={text} className="uppercase text-sm font-medium">
-                    {text}
-                  </li>
-                ))}
-              </ul>
-            )}
+            </div>
           </div>
         </section>
-        <section className="flex-[1] flex mt-10">
+        <section
+          className={
+            "flex-[1] flex " +
+            (project.style === "web" ? "-translate-y-10" : "translate-y-10")
+          }
+        >
           <div className={style.thumbnails}>
             {project?.thumbnails?.map((src, index) => (
               <Image
@@ -103,16 +104,17 @@ export default function Project({
                 priority
                 key={src}
                 src={src}
-                width={1400}
-                height={1000}
-                alt="Previw"
-                className="w-full rounded-md object-contain"
+                width={project.style === "web" ? 1400 : 400}
+                height={project.style === "web" ? 900 : 900}
+                alt="Project thumbnail"
+                className="w-full rounded object-contain"
               />
             ))}
           </div>
         </section>
       </main>
-      <main className="flex flex-col justify-center p-5 w-screen md:w-11/12 mx-auto gap-5 min-h-screen mt-20">
+
+      <main className="flex flex-col justify-center p-5 w-full md:w-11/12 mx-auto gap-5 min-h-screen mt-20">
         <h1 className="text-4xl md:text-6xl font-extrabold text-white flex flex-col">
           <span className="text-base text-purple-800 font-bold">
             <span className="text-2xl">&#x2192;</span> Preview
@@ -136,22 +138,19 @@ export default function Project({
           ))}
         </div>
 
-        <div className={`${style.images}`}>
+        <section className={`${style.images}`}>
           {project?.images?.map((src, index) => (
             <Image
               priority
               key={src}
               src={src}
-              width={1200}
-              height={900}
+              width={project.style === "web" ? 1400 : 400}
+              height={project.style === "web" ? 900 : 900}
               alt="Project photo preview"
-              className={
-                "rounded-lg object-contain w-full " +
-                (project.style === "web" ? "lg:w-[calc(50%-1.25rem)]" : "")
-              }
+              className={"rounded object-contain w-full "}
             />
           ))}
-        </div>
+        </section>
       </main>
     </main>
   );
