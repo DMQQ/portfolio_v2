@@ -264,8 +264,10 @@ export default function Home() {
 
           <div className="w-full mt-5 xl:w-2/3">
             <h5 className="text-xl">
-              Zespół szkół elektronicznych i telekomunikacyjnych in Olsztyn,
-              Poland <br /> (2019-2024)
+              <span className="text-orange-600 font-bold">
+                Zespół szkół elektronicznych i telekomunikacyjnych
+              </span>{" "}
+              in Olsztyn, Poland <br /> (2019-2024)
             </h5>
 
             <p className="text-zinc-300 flex-1 mt-2">
@@ -303,23 +305,51 @@ export default function Home() {
             </p>
           </div>
         </section>
-        <section className="grid grid-cols-1 2xs:grid-cols-2 sm:grid-cols-4 xl:grid-cols-2 justify-center font-bold items-center gap-5 mt-10">
-          <div className="h-56 bg-zinc-950 rounded-md flex justify-center items-center">
+        <section className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-2 justify-center font-bold items-center gap-5 mt-10">
+          <div className="h-56 bg-zinc-950 rounded-md flex flex-col justify-center items-center">
+            <Image
+              src={"/document.svg"}
+              width={60}
+              height={60}
+              alt="document icon"
+              className="invert mb-2"
+            />
             INF.03 - 2021
           </div>
-          <div className="h-56 bg-zinc-950 rounded-md flex justify-center items-center">
+          <div className="h-56 bg-zinc-950 rounded-md flex flex-col justify-center items-center">
+            <Image
+              src={"/document.svg"}
+              width={60}
+              height={60}
+              alt="document icon"
+              className="invert mb-2"
+            />
             INF.04 - 2024
           </div>
-          <div className="h-56 bg-zinc-950 rounded-md flex justify-center items-center text-center p-5">
+          <div className="h-56 bg-zinc-950 flex-col rounded-md flex justify-center items-center text-center p-5">
+            <Image
+              src={"/course.png"}
+              width={60}
+              height={60}
+              alt="document icon"
+              className="invert mb-2"
+            />
             Multiple online courses <br /> and tutorials
           </div>
-          <div className="h-56 bg-zinc-950 rounded-md flex justify-center items-center text-center">
-            Many fullstack projects
+          <div className="h-56 bg-zinc-950 rounded-md flex flex-col justify-center items-center p-5 text-center">
+            <Image
+              src={"/project.png"}
+              width={60}
+              height={60}
+              alt="document icon"
+              className="invert mb-2"
+            />
+            Many FullStack <br /> projects
           </div>
         </section>
       </article>
 
-      <article className="w-full hidden p-5 md:w-11/12 mx-auto py-20 flex flex-col lg:flex-row justify-between items-center">
+      {/* <article className="w-full hidden p-5 md:w-11/12 mx-auto py-20 flex flex-col lg:flex-row justify-between items-center">
         <section className="flex-1 flex flex-col">
           <h4 className="text-white text-5xl md:text-7xl font-extrabold flex flex-col">
             <span className="text-lg text-orange-600">
@@ -400,22 +430,36 @@ export default function Home() {
             </button>
           </form>
         </section>
-      </article>
+      </article> */}
 
-      <footer className="text-zinc-600 p-5 flex flex-wrap flex-row justify-between">
-        <p className="">Damian Derlecki</p>
-        <p className="">Olsztyn, Poland</p>
-
-        <a href="mailto:damianderlecki04@gmail.com">
-          Email damianderlecki04@gmail.com
-        </a>
-        <a href="https://github.com/DMQQ">Github: DMQQ</a>
-        <p>
-          <a href="https://www.freepik.com/free-vector/video-game-developer-concept-illustration_13795589.htm#query=developer%20illustration&position=14&from_view=keyword&track=ais&uuid=561481ad-317f-4c32-a284-8247369f0008">
-            Image by storyset
+      <footer className="text-zinc-700 p-5 flex flex-wrap flex-row justify-between">
+        <div>
+          <p className="">Damian Derlecki</p>
+          <p className="">Olsztyn, Poland</p>
+        </div>
+        <div className="flex flex-col">
+          <a href="mailto:damianderlecki04@gmail.com">
+            Email damianderlecki04@gmail.com
+          </a>
+          <a href="https://github.com/DMQQ">Github: DMQQ</a>
+        </div>
+        <div>
+          <p>
+            <a href="https://www.freepik.com/free-vector/video-game-developer-concept-illustration_13795589.htm#query=developer%20illustration&position=14&from_view=keyword&track=ais&uuid=561481ad-317f-4c32-a284-8247369f0008">
+              Image by storyset
+            </a>{" "}
+            on Freepik
+          </p>
+          Project by Nithinan Tatah from{" "}
+          <a
+            href="https://thenounproject.com/browse/icons/term/project/"
+            target="_blank"
+            title="Project Icons"
+          >
+            Noun Project
           </a>{" "}
-          on Freepik
-        </p>
+          (CC BY 3.0)
+        </div>
       </footer>
     </main>
   );
