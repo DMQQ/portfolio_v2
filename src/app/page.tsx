@@ -455,7 +455,7 @@ export default function Home() {
             </a>{" "}
             on Freepik
           </p>
-          Project by Nithinan Tatah from{" "}
+          Icons by Nithinan Tatah from{" "}
           <a
             href="https://thenounproject.com/browse/icons/term/project/"
             target="_blank"
