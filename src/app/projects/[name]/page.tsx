@@ -119,7 +119,15 @@ export default function Project({
           <span className="text-base text-orange-600 font-bold">
             <span className="text-2xl">&#x2192;</span> Preview
           </span>
-          Project preview <span className="gradient-text max-w-sm">images</span>
+          Project preview{" "}
+          <span
+            className="gradient-text max-w-sm"
+            style={{
+              lineHeight: "5rem",
+            }}
+          >
+            images
+          </span>
         </h1>
 
         <span className="text-base text-orange-600 font-bold flex flex-row items-center gap-2">

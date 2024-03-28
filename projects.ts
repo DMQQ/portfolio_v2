@@ -57,7 +57,7 @@ export const projects: IProject[] = [
       },
       {
         path: "https://github.com/DMQQ/visbro-web",
-        name: "Code",
+        name: "Frontend code",
       },
     ],
 
@@ -114,11 +114,11 @@ export const projects: IProject[] = [
     links: [
       {
         path: "https://github.com/DMQQ/shop-server",
-        name: "Backend Code",
+        name: "Backend code",
       },
       {
         path: "https://github.com/DMQQ/shop-mobile",
-        name: "Code",
+        name: "Mobile code",
       },
     ],
 

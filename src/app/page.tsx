@@ -192,7 +192,12 @@ export default function Home() {
         >
           <span className="text-2xl">&#x2192;</span> View Github
         </a>
-        <span className="gradient-text max-w-lg">
+        <span
+          className="gradient-text max-w-lg"
+          style={{
+            lineHeight: "5rem",
+          }}
+        >
           <span className="text-white">My</span> Projects
         </span>
       </h3>
